@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block navbar %}
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+          <h5 class="my-0 mr-md-auto font-weight-normal" style="color:black;">Online Play List</h5>
+          <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="/about">About us</a>
+            <a class="p-2 text-dark" href="/contact_us">Contact us</a>
+          </nav>
+          <a class="btn btn-outline-primary" href="/">Logout</a>
+        </div>
+    {% endblock %}
+{% block main %}
+
+    <h1>Hello {{ user['username'] | title }} </h1>
+    <h1>Videos play list:</h1>
+
+    <div class="container col-sm-12">
+        <div class="row">
+                <div class="card col-sm-6" style="color:black;">
+                   <a href="/category_songs/1" style="text-align:center;"> sad songs</a>
+                    <img src="/static/sad.jpg" style="width: 160px;height: 140px;border-radius: 100px; margin-left:30%;">
+                </div>
+                <div class="card col-sm-6" style="color:black;">
+                    <a href="/category_songs/2" style="text-align:center;"> study songs</a>
+                    <img src="/static/study.jfif" style="width: 160px;height: 140px;border-radius: 100px; margin-left:30%;">
+                </div>
+             <div class="col-sm-12" style="color:black;">
+                    <br>
+                </div>
+                <div class="card col-sm-6" style="color:black;">
+                    <a href="/category_songs/3" style="text-align:center;"> sleep songs</a>
+                    <img src="/static/sleep.jpg" style="width: 160px;height: 140px;border-radius: 100px; margin-left:30%;">
+                </div>
+                <div class="card col-sm-6" style="color:black;">
+                    <a href="/category_songs/4" style="text-align:center;"> romantic songs</a>
+                    <img src="/static/romantic.jfif" style="width: 160px;height: 140px;border-radius: 100px; margin-left:30%;">
+                </div>
+             <div class="col-sm-12" style="color:black;">
+                    <br>
+                </div>
+                <div class="card col-sm-6" style="color:black;">
+                    <a href="/category_songs/5" style="text-align:center;"> rap songs</a>
+                    <img src="/static/rap.jpg" style="width: 160px;height: 140px;border-radius: 100px; margin-left:30%;">
+                </div>
+                <div class="card col-sm-6" style="color:black;">
+                   <a href="/category_songs/6" style="text-align:center;"> dance songs</a>
+                    <img src="/static/dance.jpeg" style="width: 160px;height: 140px;border-radius: 100px; margin-left:30%;">
+                </div>
+             <div class="col-sm-12" style="color:black;">
+                    <br>
+                </div>
+                <div class="card col-sm-6" style="color:black;">
+                    <a href="/category_songs/7" style="text-align:center;"> children songs</a>
+                    <img src="/static/children.jpg" style="width: 160px;height: 140px;border-radius: 100px; margin-left:30%;">
+                </div>
+                <div class="card col-sm-6" style="color:black;">
+                    <a href="/category_songs/8" style="text-align:center;"> relax songs</a>
+                    <img src="/static/calm.jfif" style="width: 160px;height: 140px;border-radius: 100px; margin-left:30%;">
+                </div>
+             <div class="col-sm-12" style="color:black;">
+                    <br>
+             </div>
+    </div>
+        </div>
+{% endblock %}
+

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block navbar %}
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+          <h5 class="my-0 mr-md-auto font-weight-normal" style="color:black;">Online Play List</h5>
+          <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="/about">About us</a>
+            <a class="p-2 text-dark" href="/contact_us">Contact us</a>
+          </nav>
+          <a class="btn btn-outline-primary" href="/">Logout</a>
+        </div>
+    {% endblock %}
+{% block main %}
+categories of songs:
+<ul>
+  <li>sad</li>
+  <li>study</li>
+  <li>sleep</li>
+  <li>romantic</li>
+  <li>rap</li>
+  <li>dance</li>
+  <li>children</li>
+  <li>relax</li>
+</ul>
+
+    <form method="post">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.name.label }}
+            {{ form.name(class="form-control") }}
+            {% for error in form.name.errors %}
+                <small>{{ error }}</small>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.source.label }}
+            {{ form.source(class="form-control") }}
+            {% for error in form.source.errors %}
+                <small>{{ error }}</small>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.category.label }}
+            {{ form.category(class="form-control") }}
+            {% for error in form.category.errors %}
+                <small>{{ error }}</small>
+            {% endfor %}
+        </div>
+        {{ form.submit(class="form-control") }}
+    </form>
+{% endblock %}

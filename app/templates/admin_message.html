@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block navbar %}
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+          <h5 class="my-0 mr-md-auto font-weight-normal" style="color:black;">Online Play List</h5>
+          <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="/about">About</a>
+          </nav>
+          <a class="btn btn-outline-primary" href="/">Logout</a>
+        </div>
+    {% endblock %}
+{% block main %}
+    <h1>Users:</h1>
+    <div class="container">
+        <div class="card-deck col-sm-12">
+            {% for message in message_list %}
+                <div class="card col-sm-3" style="color: black;">
+                    <p>name of message sender: {{ message[0]}} </p><br>
+                    <p>subject of message: {{ message[1]}} </p><br>
+                    <a href="{{ message[2]}}" style="color:blue;">source of song: {{ message[2]}} </a><br>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
